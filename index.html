@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seba Aberturas | Ventanas y Puertas de Aluminio en Rivera y Livramento</title>
+<meta name="description" content="Catálogo de aberturas de aluminio modernas en la frontera. Ventanas con rejas integradas, puertas residenciales y combos en oferta. ¡Aceptamos tarjetas uruguayas!">
+<meta name="keywords" content="aberturas aluminio Rivera, ventanas aluminio Livramento, janelas alumínio Santana do Livramento, puertas aluminio baratas, ventanas con reja, cerramientos aluminio frontera">
+<meta property="og:title" content="Seba Aberturas | Ventanas y Puertas de Aluminio Premium">
+<meta property="og:description" content="Aberturas de aluminio modernas con rejas integradas en la frontera Rivera-Livramento. ¡Aceptamos tarjetas!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sebaaberturas.com">
+<meta property="og:locale" content="es_UY">
+<meta property="og:locale:alternate" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@200;300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Seba Aberturas",
+  "description": "Fabricación y comercialización de aberturas de aluminio, cerramientos y herrajes",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Tamandaré 1416",
+    "addressLocality": "Santana do Livramento",
+    "addressRegion": "RS",
+    "addressCountry": "BR"
+  },
+  "telephone": ["+59899174220", "+555399174202"],
+  "url": "https://sebaaberturas.com",
+  "sameAs": [
+    "https://www.instagram.com/seba_aberturas_/",
+    "https://www.facebook.com/seba.aberturas.5"
+  ]
+}
+</script>
+<style>
+/* =============================================
+   DESIGN TOKENS
+   ============================================= */
+:root {
+  --bg-main: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-tertiary: #E9ECEF;
+  --text-main: #111827;
+  --text-muted: #6B7280;
+  --border-color: #E5E7EB;
+  --border-light: rgba(0,0,0,0.08);
+  --blue: #1A56FF;
+  --blue-rgb: 26, 86, 255;
+  --gray-dark: #374151;
+  --red: #E63946;
+  --green: #25D366;
+  --green-rgb: 37, 211, 102;
+  --font-h: 'Montserrat', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-b: 'Inter', sans-serif;
+}
+
+/* =============================================
+   RESET
+   ============================================= */
+html:not([lang="pt"]) [lang="pt"] { display: none !important; }
+html[lang="pt"] [lang="es"] { display: none !important; }
+
+.lang-switch { display: flex; gap: 8px; align-items: center; margin-left: 24px; border-left: 1px solid var(--border-color); padding-left: 24px; }
+.lang-btn { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); transition: color 0.2s; background: none; border: none; cursor: pointer; padding: 0; }
+.lang-btn:hover, html:not([lang="pt"]) .lang-btn[data-lang="es"], html[lang="pt"] .lang-btn[data-lang="pt"] { color: var(--text-main); }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-b);
+  background: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+body.loading { overflow: hidden; }
+
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; font-family: var(--font-b); cursor: pointer; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* =============================================
+   UTILITY
+   ============================================= */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+/* Section divider — thin industrial line */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* Crosshair corner accent */
+.crosshair {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+}
+.crosshair::before, .crosshair::after {
+  content: '';
+  position: absolute;
+  background: var(--blue);
+}
+.crosshair::before { width: 1px; height: 100%; left: 50%; top: 0; }
+.crosshair::after { width: 100%; height: 1px; top: 50%; left: 0; }
+
+/* Label */
+.label {
+  font-family: var(--font-b);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.label::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--blue);
+}
+
+/* =============================================
+   SCROLL PROGRESS
+   ============================================= */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--blue);
+  z-index: 10001;
+  width: 0%;
+  will-change: width;
+}
+
+/* =============================================
+   NOISE OVERLAY
+   ============================================= */
+.noise {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* =============================================
+   LOADER
+   ============================================= */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-main);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  clip-path: inset(0);
+}
+.loader.hide { clip-path: inset(0 0 100% 0); }
+
+.loader-brand {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  overflow: hidden;
+}
+.loader-brand span {
+  display: inline-block;
+  transform: translateY(110%);
+  animation: loaderIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes loaderIn {
+  to { transform: translateY(0); }
+}
+
+.loader-bar-track {
+  width: 180px; height: 1px;
+  background: var(--border-color);
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.loader-bar-fill {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 0%;
+  background: var(--blue);
+}
+
+.loader-sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 16px;
+  opacity: 0;
+  animation: fadeIn 0.5s 0.8s forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+/* =============================================
+   NAV
+   ============================================= */
+.nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 9998;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom-color: var(--border-color);
+  padding: 14px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-h);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.nav-logo em {
+  font-style: normal;
+  color: var(--blue);
+}
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.15s;
+  position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text-main); }
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 100%; height: 1px;
+  background: var(--blue);
+}
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; z-index: 10002; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text-main); transition: all 0.25s ease; }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-main);
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 40px;
+  gap: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.mobile-menu.active { opacity: 1; pointer-events: auto; }
+.mobile-menu a {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-menu.active a { opacity: 1; transform: translateX(0); }
+.mobile-menu a:hover { color: var(--blue); }
+
+/* =============================================
+   HERO — EDITORIAL STYLE
+   ============================================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-bg img, .hero-bg video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) saturate(1.3) contrast(1.05);
+}
+/* Vignette for text readability with brand blue tint */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, var(--bg-main) 0%, rgba(255, 255, 255, 0.95) 45%, transparent 80%),
+    linear-gradient(to top, var(--bg-main) 0%, transparent 20%),
+    linear-gradient(to bottom, rgba(41, 98, 255, 0.1) 0%, transparent 35%);
+  z-index: 3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 64px;
+}
+
+.hero-text { max-width: 800px; }
+
+.hero-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: clipIn 0.6s 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-label::before {
+  content: '';
+  width: 40px; height: 1px;
+  background: var(--blue);
+}
+
+@keyframes clipIn {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+.hero-title {
+  font-family: var(--font-h);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+
+.hero-title .highlight {
+  color: var(--blue);
+}
+
+.hero-title .line {
+  display: block;
+  /* Removed overflow: hidden to fix clipping descenders */
+}
+
+.hero-title .line-inner {
+  display: inline-block;
+  clip-path: inset(100% 0 -20% 0); /* Allows descenders */
+  transform: translateY(30px);
+  animation: elegantReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes elegantReveal {
+  to { clip-path: inset(-20% 0 -20% 0); transform: translateY(0); }
+}
+
+.hero-title .outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text-main);
+}
+
+.hero-title .accent { color: var(--blue); }
+
+.hero-subtitle {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeUp 0.6s 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-subtitle strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Hero WhatsApp CTA */
+.hero-wa-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--text-main);
+  color: var(--bg-main);
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 32px;
+  opacity: 0;
+  animation: fadeUp 0.6s 3.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-wa-cta:hover {
+  background: var(--blue);
+  color: var(--bg-main);
+  transform: translateY(-2px);
+}
+.hero-wa-cta svg {
+  width: 20px; height: 20px;
+  fill: currentColor;
+}
+.hero-wa-cta-sub {
+  font-weight: 400;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  display: block;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px; height: 100px;
+  background: rgba(0,0,0,0.1);
+}
+.scroll-line {
+  width: 100%; height: 50%;
+  background: var(--blue);
+  animation: scrollLine 2s infinite ease-in-out;
+}
+@keyframes scrollLine {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(200%); opacity: 0; }
+}
+
+/* Quick contact widget */
+.hero-widget {
+  background: rgba(0,0,0,0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0;
+  max-width: 400px;
+  animation: fadeUp 0.6s 3.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-widget-title {
+  font-family: var(--font-h);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.15s, padding-left 0.25s;
+  position: relative;
+}
+.hero-cta:hover { color: var(--blue); padding-left: 8px; }
+.hero-cta .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.25s;
+}
+.hero-cta:hover .arrow { transform: translateX(4px); }
+
+.hero-cta-flag { font-size: 1.2rem; }
+
+
+
+/* =============================================
+   COVERFLOW CAROUSEL
+   ============================================= */
+.catalog-section {
+  padding: 140px 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(var(--blue-rgb), 0.06) 0%, transparent 70%), var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  position: relative;
+}
+.catalog-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(var(--blue-rgb), 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.cat-header {
+  padding: 0 24px;
+  max-width: 1600px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.cat-tabs {
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  border-radius: 100px;
+  gap: 8px;
+  margin-top: 32px;
+}
+.cat-tab-btn {
+  background: transparent; color: var(--gray-text); border: none;
+  padding: 10px 24px; border-radius: 100px; cursor: pointer; font-size: 0.95rem; font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); font-family: var(--font-b);
+}
+.cat-tab-btn:hover { color: var(--text-main); }
+.cat-tab-btn.active {
+  background: var(--text-main); color: var(--bg-main);
+}
+.cat-panes { position: relative; min-height: 500px; }
+.cat-pane {
+  opacity: 0; visibility: hidden; position: absolute; top: 0; left: 0; width: 100%;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.cat-pane.active { opacity: 1; visibility: visible; position: relative; z-index: 2; }
+
+.coverflow-container {
+  width: 100%;
+  position: relative;
+  --cf-card: clamp(160px, 22vw, 320px);
+  --cf-perspective: 3;
+}
+.coverflow-frame {
+  position: relative;
+  perspective: calc(var(--cf-card) * var(--cf-perspective));
+  overflow: hidden;
+  padding: 60px 0;
+  touch-action: pan-y;
+  cursor: grab;
+  outline: none;
+}
+.coverflow-frame:active { cursor: grabbing; }
+.coverflow-track {
+  position: relative;
+  height: calc(var(--cf-card) * 1.3);
+  transform-style: preserve-3d;
+  width: var(--cf-card);
+  margin: 0 auto;
+}
+.coverflow-item {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: var(--cf-card);
+  height: calc(var(--cf-card) * 1.3);
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+.coverflow-item img.main-img {
+  position: relative;
+  z-index: 2;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: contrast(1.1) saturate(1.15) brightness(1.05);
+}
+.coverflow-item img.bg-blur {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: blur(24px) brightness(0.3) saturate(1.5);
+  transform: scale(1.15);
+  z-index: 1;
+  pointer-events: none;
+}
+.cf-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+  color: var(--text-main);
+  border: 1px solid rgba(0,0,0,0.15);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  z-index: 200;
+  transition: all 0.3s;
+  backdrop-filter: blur(8px);
+}
+.cf-nav:hover { background: rgba(0,0,0,0.15); }
+.cf-prev { left: 5%; }
+.cf-next { right: 5%; }
+.cf-nav svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* =============================================
+   FAQ
+   ============================================= */
+.faq {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  background: var(--bg-tertiary);
+}
+.faq .crosshair:nth-child(1) { bottom: 24px; right: 24px; }
+
+.faq-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+.faq-header-title {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-top: 16px;
+}
+.faq-header-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+.faq-list { max-width: 900px; }
+
+.faq-item {
+  border-top: 1px solid var(--border-color);
+}
+.faq-item:last-child { border-bottom: 1px solid var(--border-color); }
+
+.faq-q {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--text-main);
+  transition: color 0.15s;
+}
+.faq-q:hover { color: var(--blue); }
+
+.faq-q-icon {
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+  position: relative;
+}
+.faq-q-icon::before, .faq-q-icon::after {
+  content: ''; position: absolute; background: currentColor;
+}
+.faq-q-icon::before { width: 16px; height: 1px; top: 50%; left: 0; }
+.faq-q-icon::after {
+  width: 1px; height: 16px; left: 50%; top: 0;
+  transition: transform 0.2s;
+}
+.faq-item.active .faq-q-icon::after { transform: rotate(90deg); }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-a-inner {
+  padding: 0 0 24px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =============================================
+   LOCATION
+   ============================================= */
+.location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.location-info {
+  padding: 80px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-right: 1px solid var(--border-color);
+}
+
+.location-title {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-top: 16px;
+}
+
+.location-detail {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 0.9rem; color: var(--text-muted);
+}
+.location-detail a { color: var(--blue); transition: opacity 0.15s; }
+.location-detail a:hover { opacity: 0.7; }
+.location-detail-icon {
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--blue);
+}
+.location-detail-icon svg { width: 100%; height: 100%; }
+
+.location-note {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-left: 2px solid var(--blue);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.location-map {
+  position: relative;
+  min-height: 400px;
+}
+.location-map iframe {
+  width: 100%; height: 100%;
+  border: 0;
+  filter: invert(90%) hue-rotate(180deg) saturate(0.2) brightness(0.7);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer-brand-name {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.footer-brand-name em { font-style: normal; color: var(--blue); }
+
+.footer-tagline {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.footer-motto {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.footer h5 {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: color 0.15s, transform 0.15s;
+  display: inline-block;
+}
+.footer-links a:hover { color: var(--text-main); transform: translateX(4px); }
+
+.footer-social {
+  display: flex; gap: 12px; margin-top: 20px;
+}
+.footer-social a {
+  width: 36px; height: 36px;
+  border: 1px solid var(--border-color);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+  color: var(--text-muted);
+}
+.footer-social a:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.footer-social a svg { width: 16px; height: 16px; }
+
+.footer-bottom {
+  padding: 20px 0;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =============================================
+   WHATSAPP FLOAT
+   ============================================= */
+.wa-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 9997;
+}
+.wa-main {
+  width: 52px; height: 52px;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 20px rgba(var(--green-rgb), 0.25);
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+.wa-main:hover { transform: scale(1.08); }
+.wa-main svg { width: 24px; height: 24px; fill: #fff; }
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(var(--green-rgb), 0.25); }
+  50% { box-shadow: 0 4px 40px rgba(var(--green-rgb), 0.4), 0 0 0 8px rgba(var(--green-rgb), 0.06); }
+}
+
+.wa-options {
+  position: absolute;
+  bottom: 62px; right: 0;
+  display: flex; flex-direction: column; gap: 6px;
+  opacity: 0; pointer-events: none;
+  transform: translateY(8px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.wa-float.expanded .wa-options {
+  opacity: 1; pointer-events: auto; transform: translateY(0);
+}
+.wa-option {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px;
+  background: var(--text-main);
+  color: var(--bg-main);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+.wa-option:hover { transform: translateX(-4px); }
+
+/* =============================================
+   SCROLL ANIMATIONS
+   ============================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.vis { opacity: 1; transform: translateY(0); }
+
+.reveal-clip {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-clip.vis { clip-path: inset(0); }
+
+.reveal-left {
+  opacity: 0; transform: translateX(-60px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.vis { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0; transform: translateX(60px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.vis { opacity: 1; transform: translateX(0); }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1024px) {
+  .hero-bg img, .hero-bg video { object-position: center center; }
+  .hero-bg::after {
+    background:
+      linear-gradient(to top, var(--bg-main) 0%, rgba(5, 10, 20, 0.85) 40%, transparent 70%),
+      linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 30%);
+  }
+  .hero-inner { flex-direction: column; justify-content: flex-end; padding-top: 180px; min-height: 85vh; }
+  .hero-widget { max-width: 100%; margin-top: 24px; }
+  .bento { grid-template-columns: 1fr; }
+  .bento-item.span-row { grid-row: auto; }
+  .bento-feature { grid-template-columns: 1fr; }
+  .bento-feature-img { min-height: 200px; }
+  .promo { grid-template-columns: 1fr; }
+  .promo-visual { min-height: 300px; }
+  .promo-content { border-left: none; border-top: 1px solid var(--border-color); }
+  .diff-row { grid-template-columns: 1fr; }
+  .diff-text { border-left: none !important; border-right: none !important; border-top: 1px solid var(--border-color); }
+  .diff-row.reverse .diff-text { order: 1; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .location { grid-template-columns: 1fr; }
+  .location-info { border-right: none; border-bottom: 1px solid var(--border-color); }
+  .footer-main { grid-template-columns: 1fr; gap: 40px; }
+  .faq-header { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { align-items: flex-end; }
+  .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .p-card { width: 300px; }
+  .p-card-img { height: 200px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body class="loading">
+
+<div class="noise" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProg" aria-hidden="true"></div>
+
+<!-- LOADER -->
+<div class="loader" id="loader" role="status">
+  <div class="loader-brand" id="loaderBrand"></div>
+  <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderFill"></div></div>
+  <div class="loader-sub">ALUMÍNIO • FERRAGEM</div>
+</div>
+
+<!-- NAV -->
+<header>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo"><em>Seb</em>Aberturas</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#hero" data-section="hero"><span lang="es">Inicio</span><span lang="pt">Início</span></a>
+      <a href="#productos" data-section="productos"><span lang="es">Productos</span><span lang="pt">Produtos</span></a>
+      <a href="#promo" data-section="promo"><span lang="es">Promo</span><span lang="pt">Ofertas</span></a>
+      <a href="#ubicacion" data-section="ubicacion"><span lang="es">Ubicación</span><span lang="pt">Localização</span></a>
+      <a href="#contacto" data-section="contacto"><span lang="es">Contacto</span><span lang="pt">Contato</span></a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" data-mob><span lang="es">Inicio</span><span lang="pt">Início</span></a>
+  <a href="#productos" data-mob><span lang="es">Productos</span><span lang="pt">Produtos</span></a>
+  <a href="#promo" data-mob><span lang="es">Promo</span><span lang="pt">Ofertas</span></a>
+  <a href="#ubicacion" data-mob><span lang="es">Ubicación</span><span lang="pt">Localização</span></a>
+  <a href="#contacto" data-mob><span lang="es">Contacto</span><span lang="pt">Contato</span></a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <video src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/Worker_handling_glass_panel_in_202608052237.mp4" autoplay loop muted playsinline></video>
+  </div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-label"><span lang="es">SOLUCIONES QUE PROTEGEN Y DURAN</span><span lang="pt">SOLUÇÕES QUE PROTEGEM E DURAM</span></div>
+        <h1 class="hero-title" aria-label="Aberturas de Aluminio y Herrería en Rivera y Livramento">
+          <span lang="es">
+            <span class="line"><span class="line-inner" style="animation-delay: 2.6s;">Aberturas de Aluminio</span></span>
+            <span class="line"><span class="line-inner" style="animation-delay: 2.75s;">y <span class="highlight">Herrería</span>.</span></span>
+          </span>
+          <span lang="pt">
+            <span class="line"><span class="line-inner" style="animation-delay: 2.6s;">Esquadrias de Alumínio</span></span>
+            <span class="line"><span class="line-inner" style="animation-delay: 2.75s;">e <span class="highlight">Serralheria</span>.</span></span>
+          </span>
+        </h1>
+        <p class="hero-subtitle">
+          <span lang="es">Ventanas, puertas y cerramientos de aluminio a medida.<br>Los mejores precios de la frontera, con atención en<br><strong>Uruguay y Brasil.</strong></span>
+          <span lang="pt">Janelas, portas e fechamentos de alumínio sob medida.<br>Os melhores preços da fronteira, com atendimento no<br><strong>Uruguai e Brasil.</strong></span>
+        </p>
+        <a href="https://wa.me/59899174220?text=Hola%20Seba%20Aberturas%2C%20quiero%20cotizar." class="hero-wa-cta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span><span lang="es">COTIZAR POR WHATSAPP</span><span lang="pt">COTAR PELO WHATSAPP</span><span class="hero-wa-cta-sub"><span lang="es">Respuesta rápida</span><span lang="pt">Resposta rápida</span></span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CATALOGO COVERFLOW -->
+<section class="catalog-section" id="productos">
+  <div class="cat-header reveal">
+    <div class="label"><span lang="es">NUESTRO CATÁLOGO</span><span lang="pt">NOSSO CATÁLOGO</span></div>
+    <h2 style="font-family: var(--font-h); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-top: 16px;">
+      <span lang="es">Conocé nuestros<br>productos.</span>
+      <span lang="pt">Conheça nossos<br>produtos.</span>
+    </h2>
+    <div class="cat-tabs">
+      <button class="cat-tab-btn active" data-target="ventanas"><span lang="es">Ventanas</span><span lang="pt">Janelas</span></button>
+      <button class="cat-tab-btn" data-target="puertas"><span lang="es">Puertas</span><span lang="pt">Portas</span></button>
+      <button class="cat-tab-btn" data-target="basculantes"><span lang="es">Basculantes</span><span lang="pt">Basculantes</span></button>
+    </div>
+  </div>
+
+  <div class="cat-panes reveal" style="transition-delay: 0.1s;">
+    
+    <!-- VENTANAS -->
+    <div class="cat-pane active" id="cat-ventanas">
+      <div class="coverflow-container">
+        <div class="coverflow-frame" tabindex="0">
+          <div class="coverflow-track">
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(1).jpeg" alt="Ventana"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(2).jpeg" alt="Ventana"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(3).jpeg" alt="Ventana"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(4).jpeg" alt="Ventana"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM.jpeg" alt="Ventana"></div>
+          </div>
+        </div>
+        <button class="cf-nav cf-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="cf-nav cf-next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <!-- PUERTAS -->
+    <div class="cat-pane" id="cat-puertas">
+      <div class="coverflow-container">
+        <div class="coverflow-frame" tabindex="0">
+          <div class="coverflow-track">
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM%20(1).jpeg" alt="Puerta"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM%20(2).jpeg" alt="Puerta"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM.jpeg" alt="Puerta"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM.jpeg" alt="Puerta"></div>
+          </div>
+        </div>
+        <button class="cf-nav cf-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="cf-nav cf-next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <!-- BASCULANTES / VENTILUZ -->
+    <div class="cat-pane" id="cat-basculantes">
+      <div class="coverflow-container">
+        <div class="coverflow-frame" tabindex="0">
+          <div class="coverflow-track">
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM%20(1).jpeg" alt="Ventiluz"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM%20(2).jpeg" alt="Ventiluz"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.20%20AM%20(1).jpeg" alt="Ventiluz"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.20%20AM%20(2).jpeg" alt="Ventiluz"></div>
+          </div>
+        </div>
+        <button class="cf-nav cf-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="cf-nav cf-next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="crosshair" aria-hidden="true" style="bottom:24px;right:24px;"></div>
+  <div class="container">
+    <div class="faq-header reveal">
+      <div>
+        <div class="label">FAQ</div>
+        <h2 class="faq-header-title">
+          <span lang="es">Preguntas<br>Frecuentes</span>
+          <span lang="pt">Dúvidas<br>Frequentes</span>
+        </h2>
+      </div>
+      <div class="faq-header-desc">
+        <span lang="es">Todo lo que necesitás saber antes de comprar tus aberturas.</span>
+        <span lang="pt">Tudo o que você precisa saber antes de comprar suas esquadrias.</span>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q"><span lang="es">¿Aceptan tarjetas uruguayas?</span><span lang="pt">Aceitam cartões uruguaios e brasileiros?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner"><span lang="es">Sí, aceptamos todas las tarjetas de crédito uruguayas y brasileñas. Podés pagar en cuotas de forma segura.</span><span lang="pt">Sim, aceitamos todos os cartões de crédito uruguaios e brasileiros. Você pode pagar parcelado de forma segura.</span></div></div></div>
+      <div class="faq-item"><button class="faq-q"><span lang="es">¿Las ventanas vienen con rejas incluidas?</span><span lang="pt">As janelas vêm com grades incluídas?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner"><span lang="es">Sí, nuestras líneas con rejas integradas vienen totalmente armadas y listas para amurar. No necesitás contratar herrería aparte.</span><span lang="pt">Sim, nossas linhas com grades integradas vêm totalmente montadas e prontas para chumbar. Não é necessário contratar serralheiro à parte.</span></div></div></div>
+      <div class="faq-item"><button class="faq-q"><span lang="es">¿Hacen envíos fuera de Rivera/Livramento?</span><span lang="pt">Fazem entregas fora de Livramento/Rivera?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner"><span lang="es">Consultá por WhatsApp las opciones de envío a tu zona. Trabajamos para que tu pedido llegue en perfectas condiciones.</span><span lang="pt">Consulte pelo WhatsApp as opções de entrega para a sua região. Trabalhamos para que seu pedido chegue em perfeitas condições.</span></div></div></div>
+      <div class="faq-item"><button class="faq-q"><span lang="es">¿Cómo transporto las aberturas de forma segura?</span><span lang="pt">Como transporto as esquadrias de forma segura?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner"><span lang="es">Te asesoramos sobre embalaje y transporte. Nuestras aberturas se preparan para soportar el traslado sin riesgos para los vidrios.</span><span lang="pt">Orientamos sobre embalagem e transporte. Nossas esquadrias são preparadas para suportar o transporte sem riscos para os vidros.</span></div></div></div>
+      <div class="faq-item"><button class="faq-q"><span lang="es">¿Tienen garantía?</span><span lang="pt">Têm garantia?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner"><span lang="es">Todos nuestros productos cuentan con garantía de fábrica sobre herrajes, soldaduras y terminaciones del aluminio.</span><span lang="pt">Todos os nossos produtos contam com garantia de fábrica para ferragens, soldas e acabamentos do alumínio.</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="ubicacion">
+  <div class="location-info">
+    <div class="reveal">
+      <div class="label"><span lang="es">ENCONTRANOS</span><span lang="pt">ONDE ESTAMOS</span></div>
+      <h2 class="location-title">
+        <span lang="es">Visitá nuestro<br>local.</span>
+        <span lang="pt">Visite nossa<br>loja.</span>
+      </h2>
+    </div>
+    <div class="reveal" style="transition-delay:0.1s;">
+      <div class="location-detail"><div class="location-detail-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></div><p>Av. Tamandaré 1416, Santana do Livramento, RS, Brasil</p></div>
+      <div class="location-detail"><div class="location-detail-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="4" y="2" width="12" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="15" x2="12" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><p>WhatsApp UY: <a href="https://wa.me/59899174220" target="_blank" rel="noopener">+598 99 174 220</a></p></div>
+      <div class="location-detail"><div class="location-detail-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="4" y="2" width="12" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="15" x2="12" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><p>WhatsApp BR: <a href="https://wa.me/5553991742002" target="_blank" rel="noopener">+55 53 9917 4202</a></p></div>
+      <div class="location-detail"><div class="location-detail-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/><circle cx="14.5" cy="5.5" r="1" fill="currentColor"/></svg></div><p><a href="https://www.instagram.com/seba_aberturas_/" target="_blank" rel="noopener">@seba_aberturas_</a></p></div>
+      <div class="location-detail"><div class="location-detail-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M18 10c0-4.42-3.58-8-8-8s-8 3.58-8 8c0 3.99 2.93 7.3 6.75 7.9v-5.59H6.72V10h2.03V8.13c0-2 1.2-3.1 3.02-3.1.87 0 1.79.16 1.79.16v1.97h-1.01c-.99 0-1.3.62-1.3 1.25V10h2.22l-.36 2.31h-1.86v5.59C15.07 17.3 18 13.99 18 10z"/></svg></div><p><a href="https://www.facebook.com/seba.aberturas.5" target="_blank" rel="noopener">Seba Aberturas</a></p></div>
+    </div>
+    <div class="location-note reveal" style="transition-delay:0.2s;">
+      <span lang="es">📍 Estamos en plena frontera. A solo minutos del centro de Rivera, Uruguay.</span>
+      <span lang="pt">📍 Estamos na fronteira. A poucos minutos do centro de Rivera, Uruguai.</span>
+    </div>
+  </div>
+  <div class="location-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.42!2d-55.5266!3d-30.8908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDUzJzI2LjkiUyA1NcKwMzEnMzUuNiJX!5e0!3m2!1ses!2sbr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Seba Aberturas"></iframe>
+  </div>
+</section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer class="footer" id="contacto">
+  <div class="container">
+    <div class="footer-main">
+      <div class="reveal">
+        <div class="footer-brand-name"><em>Seb</em>Aberturas</div>
+        <div class="footer-tagline">Alumínio • Ferragem</div>
+        <div class="footer-motto">"Calidad que dura toda la vida."</div>
+      </div>
+      <div class="reveal" style="transition-delay:0.08s;">
+        <h5>Enlaces</h5>
+        <div class="footer-links">
+          <a href="#hero">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#promo">Promociones</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.16s;">
+        <h5>Contacto</h5>
+        <div class="footer-links">
+          <a href="https://wa.me/59899174220" target="_blank" rel="noopener">+598 99 174 220 (UY)</a>
+          <a href="https://wa.me/5553991742002" target="_blank" rel="noopener">+55 53 9917 4202 (BR)</a>
+          <a href="https://www.instagram.com/seba_aberturas_/" target="_blank" rel="noopener">@seba_aberturas_</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/seba_aberturas_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/seba.aberturas.5" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+          <a href="https://wa.me/59899174220" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Seba Aberturas. Todos los derechos reservados.</span>
+      <span>Rivera, Uruguay – Santana do Livramento, Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+(function(){
+'use strict';
+
+// LOADER
+const loaderBrand = document.getElementById('loaderBrand');
+const loaderFill = document.getElementById('loaderFill');
+const loader = document.getElementById('loader');
+const body = document.body;
+
+'SEBABERTURAS'.split('').forEach((c, i) => {
+  const s = document.createElement('span');
+  s.textContent = c;
+  s.style.animationDelay = `${0.2 + i * 0.05}s`;
+  if (i < 3) s.style.color = 'var(--blue)';
+  loaderBrand.appendChild(s);
+});
+
+let prog = 0;
+const pInt = setInterval(() => {
+  prog += Math.random() * 18 + 6;
+  if (prog > 100) prog = 100;
+  loaderFill.style.width = prog + '%';
+  if (prog >= 100) {
+    clearInterval(pInt);
+    setTimeout(() => { loader.classList.add('hide'); body.classList.remove('loading'); }, 300);
+    setTimeout(() => { loader.style.display = 'none'; }, 1200);
+  }
+}, 100);
+
+// SCROLL PROGRESS
+const scrollProg = document.getElementById('scrollProg');
+function updProg() {
+  const st = window.pageYOffset;
+  const dh = document.documentElement.scrollHeight - window.innerHeight;
+  scrollProg.style.width = (st / dh) * 100 + '%';
+}
+
+// NAV
+const nav = document.getElementById('nav');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+function updNav() {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  const sp = window.scrollY + 200;
+  sections.forEach(sec => {
+    const id = sec.id;
+    if (sp >= sec.offsetTop && sp < sec.offsetTop + sec.offsetHeight) {
+      navLinks.forEach(l => { l.classList.toggle('active', l.dataset.section === id); });
+    }
+  });
+}
+
+window.addEventListener('scroll', () => { updProg(); updNav(); }, { passive: true });
+
+// HAMBURGER
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const on = hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  body.style.overflow = on ? 'hidden' : '';
+});
+document.querySelectorAll('[data-mob]').forEach((a, i) => {
+  a.style.transitionDelay = `${0.05 + i * 0.04}s`;
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    body.style.overflow = '';
+  });
+});
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) window.scrollTo({ top: t.offsetTop - 70, behavior: 'smooth' });
+  });
+});
+
+// REVEAL ON SCROLL
+const reveals = document.querySelectorAll('.reveal, .reveal-clip, .reveal-left, .reveal-right');
+const rObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); rObs.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => rObs.observe(el));
+
+// COUNTER ANIMATION
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.done) {
+      e.target.dataset.done = '1';
+      const target = +e.target.dataset.target;
+      const suffix = e.target.dataset.suffix || '';
+      const start = performance.now();
+      const dur = 1800;
+      (function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 4);
+        e.target.textContent = Math.floor(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else e.target.textContent = target + suffix;
+      })(start);
+    }
+  });
+}, { threshold: 0.5 });
+statNums.forEach(el => cObs.observe(el));
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const open = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('active'); i.querySelector('.faq-a').style.maxHeight = null; });
+    if (!open) { item.classList.add('active'); a.style.maxHeight = a.scrollHeight + 'px'; }
+  });
+});
+
+
+// COVERFLOW LOGIC
+class Coverflow {
+  constructor(container) {
+    this.container = container;
+    this.frame = container.querySelector('.coverflow-frame');
+    this.track = container.querySelector('.coverflow-track');
+    this.cards = Array.from(container.querySelectorAll('.coverflow-item'));
+    
+    // Auto-generate background blur images to fill aspect ratio elegantly
+    this.cards.forEach(card => {
+      const img = card.querySelector('img');
+      if (img && !img.classList.contains('main-img')) {
+        img.classList.add('main-img');
+        const bgImg = document.createElement('img');
+        bgImg.src = img.src;
+        bgImg.className = 'bg-blur';
+        bgImg.setAttribute('aria-hidden', 'true');
+        card.insertBefore(bgImg, img);
+      }
+    });
+
+    this.count = this.cards.length;
+    this.rotate = 44; this.depth = 0.6; this.falloff = 0.56; this.fade = 0.1; this.gap = 0.05; this.loop = true;
+    this.pos = 0; this.target = 0; this.width = 0;
+    this.raf = null; this.drag = null;
+    if(this.count > 0) this.init();
+  }
+  init() {
+    this.measure();
+    window.addEventListener('resize', () => this.measure());
+    this.frame.addEventListener('pointerdown', e => this.down(e));
+    window.addEventListener('pointermove', e => this.move(e));
+    window.addEventListener('pointerup', e => this.up(e));
+    window.addEventListener('pointercancel', e => this.up(e));
+    this.frame.addEventListener('keydown', e => {
+      if(e.key === 'ArrowLeft') { e.preventDefault(); this.nudge(-1); }
+      if(e.key === 'ArrowRight') { e.preventDefault(); this.nudge(1); }
+    });
+    const p = this.container.querySelector('.cf-prev'), n = this.container.querySelector('.cf-next');
+    if(p) p.addEventListener('click', () => this.nudge(-1));
+    if(n) n.addEventListener('click', () => this.nudge(1));
+    this.paint();
+  }
+  measure() { this.width = this.cards[0].offsetWidth; this.paint(); }
+  indexAt(p) { return ((Math.round(p) % this.count) + this.count) % this.count; }
+  clamp(p) { return this.loop ? p : Math.max(0, Math.min(this.count - 1, p)); }
+  paint() {
+    if(!this.width) return;
+    const pitch = this.width * (1 + this.gap), pos = this.pos;
+    this.cards.forEach((card, i) => {
+      let offset = i - pos;
+      if(this.loop) {
+        offset = ((offset % this.count) + this.count) % this.count;
+        if(offset > this.count / 2) offset -= this.count;
+      }
+      const dist = Math.abs(offset), ramp = Math.pow(dist, this.falloff);
+      const tilt = Math.min(this.rotate * ramp, 82) * Math.sign(offset);
+      card.style.transform = `translateX(calc(-50% + ${offset * pitch}px)) translateZ(${-this.depth * this.width * ramp}px) rotateY(${-tilt}deg)`;
+      const edge = this.loop ? Math.min(1, Math.max(0, this.count / 2 - dist)) : 1;
+      card.style.opacity = Math.max(0, 1 - this.fade * dist) * edge;
+      card.style.zIndex = 100 - Math.round(dist);
+    });
+  }
+  settle(tgt) {
+    if(this.raf) cancelAnimationFrame(this.raf);
+    this.target = tgt;
+    const step = () => {
+      const rem = tgt - this.pos;
+      if(Math.abs(rem) < 0.0004) { this.pos = tgt; this.paint(); this.raf = null; return; }
+      this.pos += rem * 0.16; this.paint();
+      this.raf = requestAnimationFrame(step);
+    };
+    this.raf = requestAnimationFrame(step);
+  }
+  nudge(by) { this.settle(this.clamp(Math.round(this.target) + by)); }
+  down(e) {
+    if(this.raf) cancelAnimationFrame(this.raf);
+    this.drag = { id: e.pointerId, x: e.clientX, pos: this.pos, v: 0, t: performance.now() };
+    this.frame.setPointerCapture(e.pointerId);
+    this.target = this.pos;
+  }
+  move(e) {
+    const d = this.drag;
+    if(!d || d.id !== e.pointerId) return;
+    const pitch = this.width * (1 + this.gap);
+    if(!pitch) return;
+    const now = performance.now(), prev = this.pos;
+    this.pos = this.clamp(d.pos - (e.clientX - d.x) / pitch);
+    d.v = ((this.pos - prev) / Math.max(now - d.t, 1)) * 1000;
+    d.t = now;
+    this.paint();
+  }
+  up(e) {
+    const d = this.drag;
+    if(!d || d.id !== e.pointerId) return;
+    this.drag = null;
+    const carried = Math.max(-2, Math.min(2, d.v * 0.18));
+    this.settle(this.clamp(Math.round(this.pos + carried)));
+  }
+}
+
+const carousels = [];
+document.querySelectorAll('.coverflow-container').forEach(c => carousels.push(new Coverflow(c)));
+
+// CATALOG TABS
+const catTabBtns = document.querySelectorAll('.cat-tab-btn');
+const catPanes = document.querySelectorAll('.cat-pane');
+catTabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    catTabBtns.forEach(b => b.classList.remove('active'));
+    catPanes.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('cat-' + btn.dataset.target).classList.add('active');
+    setTimeout(() => { carousels.forEach(c => c.measure()); }, 50);
+  });
+});
+
+// LANGUAGE SWITCHER
+const langBtns = document.querySelectorAll('.lang-btn');
+const htmlEl = document.documentElement;
+function setLang(lang) {
+  htmlEl.setAttribute('lang', lang);
+  localStorage.setItem('sebaLang', lang);
+}
+// Init language from storage or browser preference
+const savedLang = localStorage.getItem('sebaLang') || (navigator.language.startsWith('pt') ? 'pt' : 'es');
+setLang(savedLang);
+langBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    setLang(btn.dataset.lang);
+  });
+});
+
+updNav();
+updProg();
+})();
+</script>
+</body>
+</html>
