@@ -1500,31 +1500,37 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
-  background: var(--green);
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #25d366, #128c7e); /* Premium WhatsApp Green */
   color: #fff;
   font-family: var(--font-h);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 100px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 24px -6px rgba(37, 211, 102, 0.4), inset 0 1px 0 rgba(255,255,255,0.25);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  backdrop-filter: blur(10px);
 }
 .cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(var(--green-rgb), 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -6px rgba(37, 211, 102, 0.5), inset 0 1px 0 rgba(255,255,255,0.3);
+  filter: brightness(1.05);
 }
 .cta-btn svg { width: 18px; height: 18px; fill: #fff; }
 
 .cta-btn-dark {
-  background: var(--text-main);
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 .cta-btn-dark:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+  filter: brightness(1.15);
 }
 
 .cta-btn-outline {
