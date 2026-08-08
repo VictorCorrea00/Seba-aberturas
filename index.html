@@ -1128,10 +1128,12 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero { align-items: stretch; padding-top: 80px; flex-direction: column; min-height: auto; }
-  .hero-content { order: 1; background: #ffffff; padding: 20px 0; }
-  .hero-bg { position: relative; order: 2; height: 350px; min-height: 40vh; }
-  .hero-bg::after { display: none; }
+  .hero { align-items: flex-start; padding-top: 100px; }
+  .hero-bg::after {
+    background: 
+      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 380px, rgba(255, 255, 255, 0) 550px),
+      linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 40px);
+  }
   .hero-bg video { object-position: center bottom; }
   .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); line-height: 1.05; letter-spacing: -0.02em; }
   .hero-subtitle { font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5; max-width: 100%; }
@@ -2025,9 +2027,12 @@ ul { list-style: none; }
 
 /* Responsive adjustments for innovations */
 @media (max-width: 900px) {
-  .hero-inner { padding: 0 24px 16px; flex-direction: column; align-items: flex-start; gap: 24px; width: 100%; }
-  .hero-text { width: 100%; margin-top: 0; }
-  .hero-btns-wrap { flex-direction: column; width: 100%; gap: 12px; margin-top: 1rem; }
+  .hero-inner { padding: 0 20px 40px; flex-direction: column; align-items: flex-start; gap: 24px; width: 100%; }
+  .hero-text {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .hero-btns-wrap { flex-direction: column; width: 100%; gap: 12px; margin-top: 1.5rem; }
   .hero-btns-wrap a { width: 100%; text-align: center; justify-content: center; }
   .section-title { text-align: left; font-size: clamp(2.2rem, 9vw, 3rem); }
   .section-subtitle { text-align: left; margin: 16px 0 0 0; }
