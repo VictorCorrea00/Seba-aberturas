@@ -936,12 +936,15 @@ ul { list-style: none; }
   width: 52px; height: 52px;
   background: var(--green);
   display: flex; align-items: center; justify-content: center;
-  transition: transform 0.2s;
+  border-radius: 50%; border: none; cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
   box-shadow: 0 4px 20px rgba(var(--green-rgb), 0.25);
   animation: waPulse 2.5s ease-in-out infinite;
 }
 .wa-main:hover { transform: scale(1.08); }
-.wa-main svg { width: 24px; height: 24px; fill: #fff; }
+.wa-main svg { width: 24px; height: 24px; fill: #fff; transition: fill 0.3s; }
+.wa-float.expanded .wa-main { background: #fff; animation: none; }
+.wa-float.expanded .wa-main svg { fill: var(--green); }
 
 @keyframes waPulse {
   0%, 100% { box-shadow: 0 4px 20px rgba(var(--green-rgb), 0.25); }
