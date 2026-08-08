@@ -1134,15 +1134,19 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero { align-items: flex-start; padding-top: 100px; }
+  .hero { align-items: flex-end; padding-top: 0; }
   .hero-bg::after {
     background: 
-      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 380px, rgba(255, 255, 255, 0) 550px),
-      linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 40px);
+      linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 80px, rgba(255,255,255,0.5) 200px, transparent 55%),
+      linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, transparent 120px);
   }
-  .hero-bg video { object-position: center bottom; }
+  .hero-bg video { object-position: center 30%; }
+  .hero-inner { padding-top: 50vh; padding-bottom: 40px; }
   .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); line-height: 1.05; letter-spacing: -0.02em; }
   .hero-subtitle { font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5; max-width: 100%; }
+  .hero-btns-wrap { flex-direction: column; gap: 10px !important; }
+  .hero-wa-cta { width: 100%; justify-content: center; padding: 14px 24px; font-size: 0.88rem; }
+  .scroll-indicator { display: none; }
   .p-card { width: 300px; }
   .p-card-img { height: 200px; }
   .stats { grid-template-columns: 1fr 1fr; }
