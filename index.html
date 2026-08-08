@@ -2326,11 +2326,11 @@ ul { list-style: none; }
       <div class="coverflow-container">
         <div class="coverflow-frame" tabindex="0">
           <div class="coverflow-track">
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(1).jpeg" alt="Ventana"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(2).jpeg" alt="Ventana"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(3).jpeg" alt="Ventana"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(4).jpeg" alt="Ventana"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM.jpeg" alt="Ventana"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(1).jpeg" alt="Ventana" data-title-pt="Vitrô com Uma Folha Fixa" data-title-es="Ventana de Aluminio con Una Hoja Fija" data-desc-pt="Dimensões: 1.00 x 1.20M" data-desc-es="Dimensiones: 1.00 x 1.20M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(2).jpeg" alt="Ventana" data-title-pt="Vitrô com Grade" data-title-es="Ventana de Aluminio con Reja" data-desc-pt="Dimensões: 1.20 x 1.50M" data-desc-es="Dimensiones: 1.20 x 1.50M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(3).jpeg" alt="Ventana" data-title-pt="Vitrô - Corre as Duas Folhas" data-title-es="Ventana Corrediza (Dos Hojas Móviles)" data-desc-pt="Dimensões: 1.00 x 1.20M" data-desc-es="Dimensiones: 1.00 x 1.20M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM%20(4).jpeg" alt="Ventana" data-title-pt="Janela Persiana com Vidro (Branca)" data-title-es="Ventana con Persiana Integrada (Blanca)" data-desc-pt="Dimensões: 1.20 x 1.20M" data-desc-es="Dimensiones: 1.20 x 1.20M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%209.01.03%20AM.jpeg" alt="Ventana" data-title-pt="Janela Persiana com Vidro (Preta)" data-title-es="Ventana con Persiana Integrada (Negra)" data-desc-pt="Dimensões: 1.20 x 1.20M" data-desc-es="Dimensiones: 1.20 x 1.20M"></div>
           </div>
         </div>
         <button class="cf-nav cf-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -3076,10 +3076,19 @@ catTabBtns.forEach(btn => {
       let tags = [];
 
       if (img.hasAttribute('data-title-pt') || img.hasAttribute('data-title-es')) {
-        categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
         titleEl.textContent = lang === 'pt' ? img.getAttribute('data-title-pt') : img.getAttribute('data-title-es');
         descEl.textContent = lang === 'pt' ? img.getAttribute('data-desc-pt') : img.getAttribute('data-desc-es');
-        tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Alta Densidade', '✓ Fechadura de Segurança', '✓ Isolamento Acústico'] : ['✓ Aluminio Epoxi', '✓ Alta Densidad', '✓ Cerradura de Seguridad', '✓ Aislante Acústico'];
+        
+        if (alt.toLowerCase().includes('puerta')) {
+          categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
+          tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Alta Densidade', '✓ Fechadura de Segurança', '✓ Isolamento Acústico'] : ['✓ Aluminio Epoxi', '✓ Alta Densidad', '✓ Cerradura de Seguridad', '✓ Aislante Acústico'];
+        } else if (alt.toLowerCase().includes('ventana')) {
+          categoryEl.textContent = 'ALUMINIO SERIE 25';
+          tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Vidro Float', '✓ Acabamento Premium', '✓ Alta Durabilidade'] : ['✓ Aluminio Epoxi', '✓ Vidrio Float', '✓ Acabado Premium', '✓ Alta Durabilidad'];
+        } else {
+          categoryEl.textContent = 'LÍNEA PREMIUM';
+          tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Acabamento Premium'] : ['✓ Aluminio Epoxi', '✓ Acabado Premium'];
+        }
       } else if(alt.toLowerCase().includes('puerta')) {
         categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
         titleEl.textContent = lang === 'pt' ? 'Porta Residencial de Alumínio' : 'Puerta Residencial de Aluminio';
