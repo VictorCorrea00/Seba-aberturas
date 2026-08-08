@@ -2993,7 +2993,6 @@ class Coverflow {
   down(e) {
     if(this.raf) cancelAnimationFrame(this.raf);
     this.drag = { id: e.pointerId, x: e.clientX, pos: this.pos, v: 0, t: performance.now() };
-    this.frame.setPointerCapture(e.pointerId);
     this.target = this.pos;
   }
   move(e) {
@@ -3064,24 +3063,39 @@ catTabBtns.forEach(btn => {
 
       const alt = img.getAttribute('alt') || 'Abertura';
       const lang = document.documentElement.getAttribute('lang') || 'es';
+      
+      const tagsContainer = modal.querySelector('.spec-tags');
+      tagsContainer.innerHTML = '';
+      let tags = [];
 
       if (img.hasAttribute('data-title-pt') || img.hasAttribute('data-title-es')) {
         categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
         titleEl.textContent = lang === 'pt' ? img.getAttribute('data-title-pt') : img.getAttribute('data-title-es');
         descEl.textContent = lang === 'pt' ? img.getAttribute('data-desc-pt') : img.getAttribute('data-desc-es');
+        tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Alta Densidade', '✓ Fechadura de Segurança', '✓ Isolamento Acústico'] : ['✓ Aluminio Epoxi', '✓ Alta Densidad', '✓ Cerradura de Seguridad', '✓ Aislante Acústico'];
       } else if(alt.toLowerCase().includes('puerta')) {
         categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
         titleEl.textContent = lang === 'pt' ? 'Porta Residencial de Alumínio' : 'Puerta Residencial de Aluminio';
         descEl.textContent = lang === 'pt' ? 'Porta de alto padrão com fechamento hermético e acabamento anticorrosivo.' : 'Puerta de alto estándar con cierre hermético y acabado anticorrosivo premium.';
+        tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Alta Densidade', '✓ Fechadura de Segurança', '✓ Isolamento Acústico'] : ['✓ Aluminio Epoxi', '✓ Alta Densidad', '✓ Cerradura de Seguridad', '✓ Aislante Acústico'];
       } else if(alt.toLowerCase().includes('ventiluz')) {
         categoryEl.textContent = 'LÍNEA COMPLEMENTARIA';
         titleEl.textContent = lang === 'pt' ? 'Vitrô / Basculante de Alumínio' : 'Ventiluz Basculante de Aluminio';
         descEl.textContent = lang === 'pt' ? 'Ideal para banheiros e ambientes que necessitam ventilação permanente.' : 'Ideal para baños y ambientes que requieren ventilación permanente con máxima seguridad.';
+        tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Vidro Esmerilado', '✓ Fecho Prático'] : ['✓ Aluminio Epoxi', '✓ Vidrio Esmerilado', '✓ Cierre Práctico'];
       } else {
         categoryEl.textContent = 'ALUMINIO SERIE 25';
         titleEl.textContent = lang === 'pt' ? 'Janela de Alumínio com Grade' : 'Ventana de Aluminio con Reja Integrada';
         descEl.textContent = lang === 'pt' ? 'Esquadria de alta densidade com grade de aço eletrosoldada e felpas perimetrais.' : 'Abertura de alta densidad con reja de acero electrosoldada e insonorización perimetral.';
+        tags = lang === 'pt' ? ['✓ Grade Integrada', '✓ Vidro Float 4mm', '✓ Alumínio Epóxi', '✓ Isolante Acústico'] : ['✓ Reja Integrada', '✓ Vidrio Float 4mm', '✓ Aluminio Epoxi', '✓ Aislante Acústico'];
       }
+
+      tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'spec-tag';
+        span.textContent = t;
+        tagsContainer.appendChild(span);
+      });
 
       const prodName = titleEl.textContent;
       const msg = lang === 'pt'
