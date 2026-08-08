@@ -2359,10 +2359,10 @@ ul { list-style: none; }
       <div class="coverflow-container">
         <div class="coverflow-frame" tabindex="0">
           <div class="coverflow-track">
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM%20(1).jpeg" alt="Ventiluz"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM%20(2).jpeg" alt="Ventiluz"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.20%20AM%20(1).jpeg" alt="Ventiluz"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.20%20AM%20(2).jpeg" alt="Ventiluz"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM%20(1).jpeg" alt="Ventiluz" data-title-pt="Basculante Acabamento Brilho" data-title-es="Ventiluz Aluminio Brillante" data-desc-pt="Vidro Canelado. Dimensões: 0.60 x 0.40M" data-desc-es="Vidrio Acanalado. Dimensiones: 0.60 x 0.40M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM%20(2).jpeg" alt="Ventiluz" data-title-pt="Basculante com 4 Vidros Canelados" data-title-es="Ventiluz con 4 Vidrios Acanalados" data-desc-pt="Máxima ventilação vertical." data-desc-es="Máxima ventilación vertical."></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.20%20AM%20(1).jpeg" alt="Ventiluz" data-title-pt="Basculante Branco com Vidro Canelado" data-title-es="Ventiluz Blanco con Vidrio Acanalado" data-desc-pt="Dimensões: 0.40 x 0.40M" data-desc-es="Dimensiones: 0.40 x 0.40M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.20%20AM%20(2).jpeg" alt="Ventiluz" data-title-pt="Basculante Duplo Vidro Canelado" data-title-es="Ventiluz Doble Vidrio Acanalado" data-desc-pt="Dimensões: 1.20 x 0.60M" data-desc-es="Dimensiones: 1.20 x 0.60M"></div>
           </div>
         </div>
         <button class="cf-nav cf-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -3085,6 +3085,9 @@ catTabBtns.forEach(btn => {
         } else if (alt.toLowerCase().includes('ventana')) {
           categoryEl.textContent = 'ALUMINIO SERIE 25';
           tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Vidro Float', '✓ Acabamento Premium', '✓ Alta Durabilidade'] : ['✓ Aluminio Epoxi', '✓ Vidrio Float', '✓ Acabado Premium', '✓ Alta Durabilidad'];
+        } else if (alt.toLowerCase().includes('ventiluz')) {
+          categoryEl.textContent = 'LÍNEA COMPLEMENTARIA';
+          tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Vidro Canelado', '✓ Fecho Prático'] : ['✓ Aluminio Epoxi', '✓ Vidrio Acanalado', '✓ Cierre Práctico'];
         } else {
           categoryEl.textContent = 'LÍNEA PREMIUM';
           tags = lang === 'pt' ? ['✓ Alumínio Epóxi', '✓ Acabamento Premium'] : ['✓ Aluminio Epoxi', '✓ Acabado Premium'];
