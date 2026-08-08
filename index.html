@@ -318,7 +318,8 @@ ul { list-style: none; }
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Prevent vertical centering overflow */
+  padding-top: 100px; /* Reserve safe space for navbar */
   overflow: hidden;
   background-color: var(--bg-main);
 }
@@ -352,8 +353,9 @@ ul { list-style: none; }
 
 .hero-inner {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 160px 24px 100px;
+  width: 100%;
+  margin: auto auto; /* Safely centers vertically within flex-start hero without overflowing top */
+  padding: 40px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1130,13 +1132,13 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero { align-items: flex-start; padding-top: 0; min-height: 100vh; min-height: 100dvh; }
+  .hero { align-items: flex-start; padding-top: 110px; min-height: 100vh; min-height: 100dvh; }
   .hero-bg::after {
     background: 
       linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 55%, rgba(255,255,255,0.4) 75%, transparent 100%);
   }
   .hero-bg video { object-position: center bottom; }
-  .hero-inner { padding-top: 130px; padding-bottom: 24px; min-height: 0; justify-content: flex-start; align-items: center; text-align: center; }
+  .hero-inner { padding: 0 0 40px 0; margin: auto auto; min-height: 0; justify-content: center; align-items: center; text-align: center; }
   .hero-label { margin-bottom: 12px; }
   .hero-title { font-size: clamp(1.7rem, 7.5vw, 2.4rem); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 16px; }
   .hero-subtitle { font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; max-width: 100%; }
