@@ -959,6 +959,9 @@ ul { list-style: none; }
 .wa-float.expanded .wa-options {
   opacity: 1; pointer-events: auto; transform: translateY(0);
 }
+@media (max-width: 768px) {
+  .wa-float.lifted { bottom: 90px; }
+}
 .wa-option {
   display: flex; align-items: center; gap: 8px;
   padding: 10px 16px;
@@ -1141,7 +1144,6 @@ ul { list-style: none; }
   .p-card-img { height: 200px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-  .wa-float { bottom: 85px; right: 20px; }
 }
 
 /* STICKY MOBILE CTA */
@@ -2222,7 +2224,7 @@ ul { list-style: none; }
 <section class="process-section" id="proceso">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-label"><span lang="es">PASO A PASO</span><span lang="pt">PASSO A PASSO</span></div>
+      <div class="section-label"><span lang="es">PASO A PASO</span><span lang="pt">PASSO A PASO</span></div>
       <h2 class="section-title">
         <span lang="es">¿Cómo trabajamos?</span>
         <span lang="pt">Como trabalhamos?</span>
@@ -3170,6 +3172,7 @@ langBtns.forEach(btn => {
 
 // STICKY MOBILE CTA BAR
 const stickyCta = document.getElementById('stickyCta');
+const waFloatDynamic = document.getElementById('waFloat');
 if(stickyCta) {
   const heroEl = document.getElementById('hero');
   const footerEl = document.querySelector('.footer');
@@ -3177,7 +3180,12 @@ if(stickyCta) {
     const scrollY = window.scrollY;
     const heroBottom = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : 600;
     const footerTop = footerEl ? footerEl.offsetTop - window.innerHeight : Infinity;
-    stickyCta.classList.toggle('visible', scrollY > heroBottom && scrollY < footerTop);
+    const isVisible = scrollY > heroBottom && scrollY < footerTop;
+    stickyCta.classList.toggle('visible', isVisible);
+    if(waFloatDynamic) {
+      if(isVisible) waFloatDynamic.classList.add('lifted');
+      else waFloatDynamic.classList.remove('lifted');
+    }
   }
   window.addEventListener('scroll', checkSticky, { passive: true });
   checkSticky();
