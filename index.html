@@ -2331,10 +2331,10 @@ ul { list-style: none; }
       <div class="coverflow-container">
         <div class="coverflow-frame" tabindex="0">
           <div class="coverflow-track">
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM%20(1).jpeg" alt="Puerta"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM%20(2).jpeg" alt="Puerta"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM.jpeg" alt="Puerta"></div>
-            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM.jpeg" alt="Puerta"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM%20(1).jpeg" alt="Puerta" data-title-pt="Porta Frizada Postigo Vidro e Grade" data-title-es="Puerta Ciega con Postigo Vidrio y Reja" data-desc-pt="Dimensões: 2.10 x 0.80M" data-desc-es="Dimensiones: 2.10 x 0.80M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM%20(2).jpeg" alt="Puerta" data-title-pt="Porta Puxador de 40cm com Frizo Cromado" data-title-es="Puerta con Tirador 40cm y Detalle Cromado" data-desc-pt="Dimensões: 2.15 x 0.84M" data-desc-es="Dimensiones: 2.15 x 0.84M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.18%20AM.jpeg" alt="Puerta" data-title-pt="Porta Frizada" data-title-es="Puerta Ciega (Frizada)" data-desc-pt="Dimensões: 2.10 x 0.70M" data-desc-es="Dimensiones: 2.10 x 0.70M"></div>
+            <div class="coverflow-item"><img src="https://dsfytdfhjwiunfdnfixh.supabase.co/storage/v1/object/public/seba%20aberturas/WhatsApp%20Image%202026-08-07%20at%208.48.19%20AM.jpeg" alt="Puerta" data-title-pt="Porta Puxador de 80cm com Vidro Lat. Champagne" data-title-es="Puerta con Tirador 80cm y Vidrio Lateral Champagne" data-desc-pt="Dimensões: 2.15 x 0.94M" data-desc-es="Dimensiones: 2.15 x 0.94M"></div>
           </div>
         </div>
         <button class="cf-nav cf-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -3060,7 +3060,11 @@ catTabBtns.forEach(btn => {
       const alt = img.getAttribute('alt') || 'Abertura';
       const lang = document.documentElement.getAttribute('lang') || 'es';
 
-      if(alt.toLowerCase().includes('puerta')) {
+      if (img.hasAttribute('data-title-pt') || img.hasAttribute('data-title-es')) {
+        categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
+        titleEl.textContent = lang === 'pt' ? img.getAttribute('data-title-pt') : img.getAttribute('data-title-es');
+        descEl.textContent = lang === 'pt' ? img.getAttribute('data-desc-pt') : img.getAttribute('data-desc-es');
+      } else if(alt.toLowerCase().includes('puerta')) {
         categoryEl.textContent = 'ALUMINIO LÍNEA ROBUSTA';
         titleEl.textContent = lang === 'pt' ? 'Porta Residencial de Alumínio' : 'Puerta Residencial de Aluminio';
         descEl.textContent = lang === 'pt' ? 'Porta de alto padrão com fechamento hermético e acabamento anticorrosivo.' : 'Puerta de alto estándar con cierre hermético y acabado anticorrosivo premium.';
