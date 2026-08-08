@@ -357,14 +357,13 @@ ul { list-style: none; }
   margin: auto auto; /* Safely centers vertically within flex-start hero without overflowing top */
   padding: 40px 24px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 32px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 64px;
 }
 
-.hero-text { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.hero-text { max-width: 800px; }
 
 .hero-label {
   font-size: 0.65rem;
@@ -401,7 +400,12 @@ ul { list-style: none; }
 }
 
 .hero-title .highlight {
-  color: #2563eb; 
+  /* Vibrant premium blue gradient */
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; 
 }
 
 .hero-title .line {
@@ -427,14 +431,13 @@ ul { list-style: none; }
 .hero-title .accent { color: #2563eb; }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
   color: #334155;
-  max-width: 650px;
-  margin: 0 auto 32px;
+  max-width: 520px;
   line-height: 1.6;
   font-weight: 500;
   opacity: 0;
-  animation: fadeUp 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeUp 0.8s 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .hero-subtitle strong {
   color: #0f172a;
@@ -446,7 +449,8 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #0f172a;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background-size: 200% auto;
   color: #ffffff;
   padding: 16px 36px;
   border-radius: 100px;
@@ -454,9 +458,9 @@ ul { list-style: none; }
   font-weight: 600;
   font-size: 0.95rem;
   opacity: 0;
-  animation: fadeUp 0.6s 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeUp 0.6s 1.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(30, 58, 138, 0.5);
   position: relative;
   overflow: hidden;
 }
@@ -483,7 +487,7 @@ ul { list-style: none; }
 .hero-wa-cta.secondary {
   background: transparent;
   color: #0f172a;
-  border: 2px solid #0f172a;
+  border: 1px solid #94a3b8;
   box-shadow: none;
 }
 .hero-wa-cta.secondary:hover {
@@ -1138,12 +1142,15 @@ ul { list-style: none; }
       linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0) 50%);
   }
   .hero-bg video { object-position: center bottom; }
-  .hero-inner { padding: 0 0 40px 0; margin: auto auto; min-height: 0; justify-content: center; align-items: center; text-align: center; }
-  .hero-label { margin-bottom: 12px; }
+  .hero-inner { flex-direction: column; padding: 0 0 40px 0; margin: auto auto; min-height: 0; justify-content: center; align-items: center; text-align: center; }
+  .hero-text { align-items: center; }
+  .hero-label { display: none; }
   .hero-title { font-size: clamp(1.7rem, 7.5vw, 2.4rem); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .hero-title .highlight { background: none; -webkit-text-fill-color: initial; color: #0f172a; }
   .hero-subtitle { font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; max-width: 100%; }
-  .hero-btns-wrap { flex-direction: column; gap: 10px !important; margin-top: 1.5rem !important; }
-  .hero-wa-cta { width: 100%; justify-content: center; padding: 14px 24px; font-size: 0.88rem; }
+  .hero-btns-wrap { flex-direction: column; width: 100%; justify-content: center; align-items: center; gap: 10px !important; margin-top: 1.5rem !important; }
+  .hero-wa-cta { width: 100%; justify-content: center; padding: 14px 24px; font-size: 0.88rem; background: #0f172a; box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.5); }
+  .hero-wa-cta.secondary { border: 2px solid #0f172a; color: #0f172a; background: transparent; }
   .scroll-indicator { display: none; }
   .p-card { width: 300px; }
   .p-card-img { height: 200px; }
@@ -2103,10 +2110,7 @@ ul { list-style: none; }
         <!-- Base Swoosh -->
         <path d="M -5 64 L 105 64 Q 50 72 -5 64 Z" fill="var(--blue)" />
       </svg>
-      <div style="display:flex; flex-direction:column; line-height: 1.2;">
-        <span><em>Seb</em>Aberturas</span>
-        <span style="font-size: 0.55rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600;"><span lang="es">SOLUCIONES QUE PROTEGEN Y DURAN</span><span lang="pt">SOLUÇÕES QUE PROTEGEM E DURAM</span></span>
-      </div>
+      <div><em>Seb</em>Aberturas</div>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#hero" data-section="hero"><span lang="es">Inicio</span><span lang="pt">Início</span></a>
@@ -2149,15 +2153,24 @@ ul { list-style: none; }
   <div class="hero-content">
     <div class="hero-inner">
       <div class="hero-text">
+        <div class="hero-label"><span lang="es">SOLUCIONES QUE PROTEGEN Y DURAN</span><span lang="pt">SOLUÇÕES QUE PROTEGEM E DURAM</span></div>
         <h1 class="hero-title" aria-label="Aberturas de Aluminio y Herrería en Rivera y Livramento">
-          <span lang="es">Aberturas de Aluminio: Calidad para toda la vida.</span>
-          <span lang="pt">Esquadrias de Alumínio: Qualidade para toda a vida.</span>
+          <span lang="es">
+            <span class="line"><span class="line-inner" style="animation-delay: 1.2s;">Aberturas de Aluminio:</span></span>
+            <span class="line"><span class="line-inner" style="animation-delay: 1.35s;">Calidad para toda <span class="highlight">la</span></span></span>
+            <span class="line"><span class="line-inner" style="animation-delay: 1.5s;">vida.</span></span>
+          </span>
+          <span lang="pt">
+            <span class="line"><span class="line-inner" style="animation-delay: 1.2s;">Esquadrias de Alumínio:</span></span>
+            <span class="line"><span class="line-inner" style="animation-delay: 1.35s;">Qualidade para toda <span class="highlight">a</span></span></span>
+            <span class="line"><span class="line-inner" style="animation-delay: 1.5s;">vida.</span></span>
+          </span>
         </h1>
         <p class="hero-subtitle">
           <span lang="es">Fabricación y diseño de alta gama al mejor precio de la frontera, con atención personalizada en Uruguay y Brasil.</span>
           <span lang="pt">Fabricação e design de alto padrão ao melhor preço da fronteira, com atendimento personalizado no Uruguai e Brasil.</span>
         </p>
-        <div class="hero-btns-wrap" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:16px; margin-top:2.5rem; width:100%;">
+        <div class="hero-btns-wrap" style="display:flex; gap:16px; margin-top:2.5rem;">
           <a href="https://wa.me/59899174220?text=Hola%20Seba%20Aberturas%2C%20quiero%20solicitar%20un%20presupuesto." class="hero-wa-cta" target="_blank" rel="noopener">
             Cotizar para Uruguay UY
           </a>
