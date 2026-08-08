@@ -332,13 +332,7 @@ ul { list-style: none; }
 .hero-bg img, .hero-bg video {
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: brightness(0.9) saturate(1.2) contrast(1.05);
-  animation: slowZoom 4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: center center;
-}
-@keyframes slowZoom {
-  from { transform: scale(1.08); }
-  to { transform: scale(1); }
+  filter: brightness(0.85) saturate(1.1) contrast(1.05);
 }
 /* Vignette for text readability and smooth bottom fade */
 .hero-bg::after {
@@ -2633,7 +2627,7 @@ ul { list-style: none; }
       <img src="store-front.png" alt="" style="max-width: 100%; max-height: 280px; object-fit: contain; display: block;" onerror="this.parentElement.style.display='none'">
     </div>
     <div class="location-map reveal-clip" style="position: relative; min-height: 350px; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.08); transition-delay: 0.1s;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.42!2d-55.5266!3d-30.8908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDUzJzI2LjkiUyA1NcKwMzEnMzUuNeJX!5e0!3m2!1ses!2sbr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Seba Aberturas" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(0.2) contrast(1.1);"></iframe>
+      <iframe src="https://maps.google.com/maps?q=-30.8908,-55.5266&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Seba Aberturas" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
     </div>
   </div>
 </section>
